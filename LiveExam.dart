@@ -1,52 +1,26 @@
 void main() {
- 
-  Map<String, String> fruits ={
-    'name' : 'Apple', 'name' : 'Grapes', 'name' : 'Banana'
-  };
+  List<Map<String, dynamic>> fruits = [
+    {'name': 'Apple', 'color': 'Red', 'price': 2.5},
+    {'name': 'Banana', 'color': 'Yellow', 'price': 1.0},
+    {'name': 'Grapes', 'color': 'Purple', 'price': 3.0}
+  ];
 
-  Map<String, String> colors ={
-    'color' : 'Red', 'color' : 'Purple', 'color' : 'Yellow'
-  };
-
-  Map<String, double> prices ={
-    'price' : 2.5, 'price' : 3.0, 'price' : 1.0
-  };
-
-  apple();
-  banana();
-  grapes();
+  displayFruitDetails(fruits);
+  applyPriceDiscount(fruits, 10);
+  displayFruitDetails(fruits);
 }
 
-
-
-
-void apple ({Apple}) {
-  String name = 'Apple';
-  String color = 'Red';
-  double price = 2.5;
-  print('$name, color: $color, price: $price');
-  print('name: $name, color: $color, price: 2.25');
-
+void displayFruitDetails(List<Map<String, dynamic>> fruits) {
+  print('Fruit Details:');
+  for (var fruit in fruits) {
+    print('Name: ${fruit['name']}, Color: ${fruit['color']}, Price: \$${fruit['price']}');
+  }
 }
 
-
-
-void banana ({Banana}) {
-
-  String name = 'Banana';
-  String color = 'Yellow';
-  double price = 1.0;
-  print('name: $name, color: $color, price: $price');
-  print('name: $name, color: $color, price: 0.9');
-}
-
-
-
-void grapes ({Grapes}) {
-
-  String name = 'Grapes';
-  String color = 'Purple';
-  double price = 3.0;
-  print('name: $name, color: $color, price: $price');
-  print('name: $name, color: $color, price: 2.7');
+void applyPriceDiscount(List<Map<String, dynamic>> fruits, double discountPercentage) {
+  for (var fruit in fruits) {
+    double originalPrice = fruit['price'];
+    double discountedPrice = originalPrice * ( discountPercentage / 100);
+    fruit['price'] = discountedPrice;
+  }
 }
