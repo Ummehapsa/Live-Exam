@@ -24,8 +24,8 @@ void apple () {
   String name = 'Apple';
   String color = 'Red';
   double price = 2.5;
-  print('name: Apple, color: Red, price: $price');
-  print('name: Apple, color: Red, price: ${price * (10 / 100)}');
+  print('name: $name, color: $color, price: $price');
+  print('name: $name, color: $color, price: ${price * (10 / 100)}');
 
 }
 
@@ -35,8 +35,8 @@ void orange () {
   String name = 'Orange';
   String color = 'Orange';
   double price = 1.0;
-  print('name: Apple, color: Red, price: $price');
-  print('name: Apple, color: Red, price: ${price * (10 / 100)}');
+  print('name: $name, color: $color, price: $price');
+  print('name: $name, color: $color, price: ${price * (10 / 100)}');
 }
 
 
@@ -45,7 +45,6 @@ void banana () {
   String name = 'Banana';
   String color = 'Yellow';
   double price = 3.0;
-  print('name: Apple, color: Red, price: $price');
-  print('name: Apple, color: Red, price: ${price * (10 / 100)}');
+  print('name: $name, color: $color, price: $price');
+  print('name: $name, color: $color, price: ${price * (10 / 100)}');
 }
-
