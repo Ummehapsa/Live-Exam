@@ -1,50 +1,52 @@
 void main() {
-  Map<String, Map<String, double>> Apple = {
-    'Apple' : {
-      'Red' : 2.5}};
+ 
+  Map<String, String> fruits ={
+    'name' : 'Apple', 'name' : 'Grapes', 'name' : 'Banana'
+  };
 
-  Map<String, Map<String, double>> Orange = {
-    'Orange' : {
-      'Orange' : 1.0}};
+  Map<String, String> colors ={
+    'color' : 'Red', 'color' : 'Purple', 'color' : 'Yellow'
+  };
 
-  Map<String, Map<String, double>> Banana = {
-    'Banana' : {
-      'Yellow' : 3.0}};
+  Map<String, double> prices ={
+    'price' : 2.5, 'price' : 3.0, 'price' : 1.0
+  };
 
   apple();
-  orange();
   banana();
+  grapes();
 }
 
 
 
 
-void apple () {
-
+void apple ({Apple}) {
   String name = 'Apple';
   String color = 'Red';
   double price = 2.5;
-  print('name: $name, color: $color, price: $price');
-  print('name: $name, color: $color, price: ${price * (10 / 100)}');
+  print('$name, color: $color, price: $price');
+  print('name: $name, color: $color, price: 2.25');
 
 }
 
 
-void orange () {
 
-  String name = 'Orange';
-  String color = 'Orange';
-  double price = 1.0;
-  print('name: $name, color: $color, price: $price');
-  print('name: $name, color: $color, price: ${price * (10 / 100)}');
-}
-
-
-void banana () {
+void banana ({Banana}) {
 
   String name = 'Banana';
   String color = 'Yellow';
+  double price = 1.0;
+  print('name: $name, color: $color, price: $price');
+  print('name: $name, color: $color, price: 0.9');
+}
+
+
+
+void grapes ({Grapes}) {
+
+  String name = 'Grapes';
+  String color = 'Purple';
   double price = 3.0;
   print('name: $name, color: $color, price: $price');
-  print('name: $name, color: $color, price: ${price * (10 / 100)}');
+  print('name: $name, color: $color, price: 2.7');
 }
